@@ -31,7 +31,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost text-xl">
-          <img src="/OIP.png" className="h-[50px]" alt="Logo" />
+          <img src="/images/OIP.png" className="h-[50px]" alt="Logo" />
           Al Mazaya
         </Link>
       </div>
