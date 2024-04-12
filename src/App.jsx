@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./pages/Home.Page";
 import NotFound from "./pages/NotFound.Page";
 import Login from "./pages/Login.Page";
+import Houses from "./pages/Houses.Page";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" Component={Home} />
+          <Route path="/Houses" Component={Houses} />
           <Route path="/login" Component={Login} />
           <Route path="*" Component={NotFound} />
         </Routes>

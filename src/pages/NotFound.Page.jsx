@@ -1,6 +1,8 @@
+import { useEffect } from "react";
 import MainLayout from "../layouts/Main.Layout";
 
 const NotFound = () => {
+  document.title = "Page Not Found";
   return (
     <MainLayout>
       <div className="flex justify-center items-center mt-5">
