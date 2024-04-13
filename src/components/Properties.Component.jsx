@@ -29,9 +29,11 @@ const Properties = () => {
         ))}
       </div>
       <div className="text-center mt-5 mb-5">
-        <Link className="btn btn-success text-white uppercase" to="/houses">
-          View More
-        </Link>
+        {location.pathname === "/" && (
+          <Link className="btn btn-success text-white uppercase" to="/houses">
+            View More
+          </Link>
+        )}
       </div>
     </>
   );

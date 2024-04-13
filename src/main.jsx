@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import "animate.css";
+import "react-toastify/dist/ReactToastify.css";
 
 // Importing Swiper CSS
 import "swiper/css";

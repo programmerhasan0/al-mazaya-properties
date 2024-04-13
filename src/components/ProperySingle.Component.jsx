@@ -19,13 +19,16 @@ const PropertySingle = (props) => {
         <div className="card-body">
           <h2 className="card-title">
             {estate_title}
-            <div
-              className={`badge badge-${
-                status === "sale" ? "success" : "secondary"
-              } text-white`}
-            >
-              {status}
-            </div>
+            {status === "sale" && (
+              <div className="badge badge-success badge-outline ">
+                {status.toUpperCase()}
+              </div>
+            )}
+            {status === "rent" && (
+              <div className="badge badge-warning badge-outline ">
+                {status.toUpperCase()}
+              </div>
+            )}
           </h2>
           <p>{description}</p>
           <div className="card-actions justify-end">

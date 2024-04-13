@@ -3,6 +3,8 @@ import NavLinks from "./NavLinks.Component";
 import "../styles/components/Navbar.style.css";
 
 const Navbar = () => {
+  const token = localStorage.getItem("token");
+
   return (
     <div className="navbar bg-warning z-10 relative">
       <div className="navbar-start">
@@ -41,9 +43,43 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <Link to="/login" className="btn btn-success text-white uppercase">
-          login
-        </Link>
+        {token && token.length > 0 ? (
+          <div className="dropdown dropdown-end">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle avatar"
+            >
+              <div className="w-10 rounded-full">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                />
+              </div>
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a className="justify-between">
+                  Profile
+                  <span className="badge">New</span>
+                </a>
+              </li>
+              <li>
+                <a>Settings</a>
+              </li>
+              <li>
+                <a>Logout</a>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <Link to="/login" className="btn btn-success text-white uppercase">
+            login
+          </Link>
+        )}
       </div>
     </div>
   );
